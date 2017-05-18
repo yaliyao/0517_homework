@@ -1,0 +1,26 @@
+<html>
+    <head>
+        <p>which day of the year<p>
+    </head>
+    <body>
+        <input type="date" id="nt" value=""/>
+        <button id="mydate" onclick= "myfunction()">click me</button>
+        <div id="demo"></div>
+        
+        <script>
+            function myfunction(){
+                var x = document.getElementById("nt").value;
+                var y = new Date(x);//取出的值為日期
+                    //alert(y);
+                var u = new Date(x);
+                    u.setMonth(0);//設u為一月
+                    u.setDate(1);//設u為一日
+                    //alert(u);
+                var z = (y-u )/(24*60*60*1000)+1;
+                
+                
+                document.getElementById("demo").innerHTML= z;
+            }
+        </script>
+    </body>
+</html>
